@@ -1,0 +1,47 @@
+databaseChangeLog:
+- changeSet:
+    id: 1712231357215-3
+    author: Nemo
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: email_address
+            type: varchar(255)
+        tableName: students
+- changeSet:
+    id: 1712231357215-4
+    author: Nemo
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            name: phone_number
+            type: integer
+        tableName: students
+- changeSet:
+    id: 1712231357215-5
+    author: Nemo
+    changes:
+    - dropColumn:
+        columnName: email
+        tableName: students
+- changeSet:
+    id: 1712231357215-1
+    author: Nemo
+    changes:
+    - modifyDataType:
+        columnName: first_name
+        newDataType: varchar(255)
+        tableName: students
+- changeSet:
+    id: 1712231357215-2
+    author: Nemo
+    changes:
+    - modifyDataType:
+        columnName: last_name
+        newDataType: varchar(255)
+        tableName: students
+
